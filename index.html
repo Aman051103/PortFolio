@@ -10,10 +10,28 @@
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Portfolio website complete</title>
+    <title>Aman Pandey - ML Engineer Portfolio</title>
 </head>
 
 <body>
+    <!--===== LOADING SCREEN =====-->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!--===== ANIMATED BACKGROUND =====-->
+    <div class="animated-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
     <!--===== HEADER =====-->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -42,7 +60,7 @@
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Aman Pandey</span><br> ML Engineer
+                <h1 class="home__title">Hi,<br>I am <span class="home__title-color typing-text"></span><br><span class="typing-subtitle"></span>
                 </h1>
 
                 <div class="home__social">
@@ -52,7 +70,10 @@
                     <a href="https://github.com/Aman051103" class="home__social-icon"><i class='bx bxl-github'></i></a>
                 </div>
 
-                <a href="#" class="button">Contact</a>
+                <a href="#contact" class="button pulse-button">
+                    <span>Contact Me</span>
+                    <i class='bx bx-right-arrow-alt' style="margin-left: 0.5rem;"></i>
+                </a>
             </div>
 
 
@@ -82,20 +103,17 @@
         <section class="about section " id="about">
             <h2 class="section-title">About</h2>
 
-            <div class="about__container bd-grid" style="display: flex; flex-direction: row;">
+            <div class="about__container bd-grid">
 
-                <div>
+                <div class="about__content">
                     <h2 class="about__subtitle">Hi this is Aman</h2>
-                    <p class="about__text">I’m a software developer and a machine learning enthusiast with a strong
-                        background in data science, machine learning, and full-stack development. I’m passionate about
+                    <p class="about__text">I'm a software developer and a machine learning enthusiast with a strong
+                        background in data science, machine learning, and full-stack development. I'm passionate about
                         solving complex challenges and creating impactful solutions through technology. In my free time,
                         I enjoy reading, staying updated on the latest technological advancements, and practicing
                         martial arts and meditation to maintain a balanced mindset.</p>
                 </div>
 
-                <div class="about__img">
-                    <img src="assets/img/img2.png" width="900" height="250" alt="">
-                </div>
             </div>
         </section>
 
@@ -103,11 +121,8 @@
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
 
-            <div class="skills__container bd-grid" style="display: flex; flex-direction: row;">
-                <div style="margin-right: 30px;">
-                    <img src="assets/img/work3.jpg" alt="" height="450" width="850" class="skills__img">
-                </div>
-                <div>
+            <div class="skills__container bd-grid">
+                <div class="skills__content">
                     <h2 class="skills__subtitle">Profesional Skills</h2>
                     <p class="skills__text">I am a passionate professional with a focus on developing high-impact
                         solutions in various technical domains. Continuously refining my expertise, I strive to bring
@@ -115,11 +130,11 @@
                         areas.</p>
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
+                            <i class='bx bx-brain skills__icon'></i>
                             <span class="skills__name">ML Algorithms</span>
                         </div>
-                        <div class="skills__bar skills__html">
-
+                        <div class="skills__bar-container">
+                            <div class="skills__bar skills__html" data-percentage="95"></div>
                         </div>
                         <div>
                             <span class="skills__percentage">95%</span>
@@ -127,11 +142,11 @@
                     </div>
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
+                            <i class='bx bx-data skills__icon'></i>
                             <span class="skills__name">Data Engineering</span>
                         </div>
-                        <div class="skills__bar skills__css">
-
+                        <div class="skills__bar-container">
+                            <div class="skills__bar skills__css" data-percentage="85"></div>
                         </div>
                         <div>
                             <span class="skills__percentage">85%</span>
@@ -139,11 +154,11 @@
                     </div>
                     <div class="skills__data">
                         <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
+                            <i class='bx bx-code-alt skills__icon'></i>
                             <span class="skills__name">Web Development</span>
                         </div>
-                        <div class="skills__bar skills__js">
-
+                        <div class="skills__bar-container">
+                            <div class="skills__bar skills__js" data-percentage="65"></div>
                         </div>
                         <div>
                             <span class="skills__percentage">65%</span>
@@ -154,8 +169,8 @@
                             <i class='bx bxs-paint skills__icon'></i>
                             <span class="skills__name">UI/UX</span>
                         </div>
-                        <div class="skills__bar skills__ux">
-
+                        <div class="skills__bar-container">
+                            <div class="skills__bar skills__ux" data-percentage="85"></div>
                         </div>
                         <div>
                             <span class="skills__percentage">85%</span>
@@ -172,8 +187,15 @@
 
             <div class="projects__container bd-grid">
 
-                <div class="project__card">
-                    <h3 class="project__title">Boofay – University Food Platform</h3>
+                <div class="project__card" data-project="boofay">
+                    <div class="project__header">
+                        <h3 class="project__title">Boofay – University Food Platform</h3>
+                        <div class="project__links">
+                            <a href="https://github.com/Aman051103" target="_blank" class="project__link" title="View on GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="project__description">
                         Zomato-style food ordering app handling 10,000+ users with sub-second response time and AWS
                         scalability.
@@ -181,8 +203,15 @@
                     <p class="project__tech">Django, AWS, JavaScript, HTML/CSS</p>
                 </div>
 
-                <div class="project__card">
-                    <h3 class="project__title">Deepfake Detection Model</h3>
+                <div class="project__card" data-project="deepfake">
+                    <div class="project__header">
+                        <h3 class="project__title">Deepfake Detection Model</h3>
+                        <div class="project__links">
+                            <a href="https://github.com/Aman051103" target="_blank" class="project__link" title="View on GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="project__description">
                         CNN using XceptionNet with 93% accuracy; 25% faster preprocessing and robust image
                         classification pipeline.
@@ -190,19 +219,34 @@
                     <p class="project__tech">Keras, CNN, Python</p>
                 </div>
 
-                <div class="project__card">
-                    <h3 class="project__title">Book Recommender System</h3>
+                <div class="project__card" data-project="book-recommender">
+                    <div class="project__header">
+                        <h3 class="project__title">Book Recommender System</h3>
+                        <div class="project__links">
+                            <a href="https://bookfinder.streamlit.app/" target="_blank" class="project__link" title="Live Demo">
+                                <i class='bx bx-link-external'></i>
+                            </a>
+                            <a href="https://github.com/Aman051103" target="_blank" class="project__link" title="View on GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="project__description">
                         Personalized book suggestions using cosine similarity on Amazon Reviews dataset. Deployed live
                         via Streamlit Cloud.
                     </p>
                     <p class="project__tech">Python, Scikit-learn, Cosine Similarity, Streamlit</p>
-                    <a href="https://bookfinder.streamlit.app/" target="_blank" class="preview-button">Preview
-                        Available</a>
                 </div>
 
-                <div class="project__card">
-                    <h3 class="project__title">Fake News Detection App</h3>
+                <div class="project__card" data-project="fake-news">
+                    <div class="project__header">
+                        <h3 class="project__title">Fake News Detection App</h3>
+                        <div class="project__links">
+                            <a href="https://github.com/Aman051103" target="_blank" class="project__link" title="View on GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="project__description">
                         TF-IDF + Logistic Regression achieving F1-score of 0.89; Flask-based web app with 100+ daily
                         users.
@@ -210,16 +254,30 @@
                     <p class="project__tech">Flask, Python, NLP, Scikit-learn</p>
                 </div>
 
-                <div class="project__card">
-                    <h3 class="project__title">Stock Price Predictor</h3>
+                <div class="project__card" data-project="stock-predictor">
+                    <div class="project__header">
+                        <h3 class="project__title">Stock Price Predictor</h3>
+                        <div class="project__links">
+                            <a href="https://github.com/Aman051103" target="_blank" class="project__link" title="View on GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="project__description">
                         LSTM-based deep learning model with 80% directional accuracy for stock trend forecasting.
                     </p>
                     <p class="project__tech">LSTM, Python</p>
                 </div>
 
-                <div class="project__card">
-                    <h3 class="project__title">Customer Support Chatbot</h3>
+                <div class="project__card" data-project="chatbot">
+                    <div class="project__header">
+                        <h3 class="project__title">Customer Support Chatbot</h3>
+                        <div class="project__links">
+                            <a href="https://github.com/Aman051103" target="_blank" class="project__link" title="View on GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="project__description">
                         Modular chatbot to handle FAQs and automate queries with scalable backend logic.
                     </p>
@@ -271,15 +329,21 @@
         </section>
     </main>
 
+    <!--===== SCROLL TO TOP BUTTON =====-->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">Aman</p>
+        <p class="footer__title">Aman Pandey</p>
         <div class="footer__social">
-            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com/in/aman-pandey-310340251/" class="footer__icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.instagram.com/_____ackerman00000/" class="footer__icon" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://x.com/pan7457905069" class="footer__icon" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://github.com/Aman051103" class="footer__icon" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
-        <p class="footer__copy">&#169; All rigths reserved</p>
+        <p class="footer__copy">&#169; 2024 Aman Pandey. All rights reserved.</p>
     </footer>
 
 
