@@ -46,19 +46,6 @@ This repository contains the source code of my personal portfolio website — a 
 
 ---
 
-## 📸 Screenshots
-
-<p align="center">
-  <img src="https://via.placeholder.com/900x500?text=Portfolio+Screenshot+1" alt="Screenshot 1" width="70%"/>
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/900x500?text=Portfolio+Screenshot+2" alt="Screenshot 2" width="70%"/>
-</p>
-
-(*Replace placeholders with your actual screenshots later.*)
-
----
 
 ## 📂 Folder Structure
 
