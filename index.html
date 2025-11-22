@@ -322,16 +322,25 @@
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title">Get In Touch</h2>
 
-            <div class="contact__container bd-grid">
-                <form action="https://formspree.io/f/xjkvbzda" method="POST" class="contact__form">
-                    <input type="text" name="name" placeholder="Name" class="contact__input">
-                    <input type="email" name="email" placeholder="Email" class="contact__input">
-                    <textarea name="message" placeholder="Your message" cols="0" rows="10"
-                        class="contact__input"></textarea>
-                    <input type="submit" value="Send" class="contact__button button">
-                </form>
+            <div class="container" style="max-width: 800px;">
+                <div class="card contact__container">
+                    <form action="https://formspree.io/f/xjkvbzda" method="POST" class="grid" style="gap: 1.5rem;">
+                        <div class="grid"
+                            style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                            <input type="text" name="name" placeholder="Name"
+                                style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: #fff; outline: none;">
+                            <input type="email" name="email" placeholder="Email"
+                                style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: #fff; outline: none;">
+                        </div>
+                        <textarea name="message" placeholder="Your message" rows="6"
+                            style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: #fff; outline: none; resize: none;"></textarea>
+                        <button type="submit" class="btn btn-primary" style="justify-self: start;">
+                            Send Message <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
