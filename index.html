@@ -100,62 +100,20 @@
         </section>
 
         <!--===== ABOUT =====-->
-        <section class="about section" id="about">
-            <h2 class="section-title">About Me</h2>
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
 
-            <div class="container grid"
-                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+            <div class="about__container bd-grid">
+
                 <div class="about__content">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--first-color);">Who I Am</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                        I'm a software developer and a machine learning enthusiast with a strong background in data
-                        science, machine learning, and full-stack development. I'm passionate about solving complex
-                        challenges and creating impactful solutions through technology.
-                    </p>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
-                        In my free time, I enjoy reading, staying updated on the latest technological advancements, and
-                        practicing martial arts and meditation to maintain a balanced mindset.
-                    </p>
-
-                    <div class="flex" style="gap: 2rem;">
-                        <div>
-                            <h4 style="font-size: 2rem; color: #fff;">02+</h4>
-                            <span style="font-size: 0.9rem; color: var(--text-muted);">Years<br>Experience</span>
-                        </div>
-                        <div>
-                            <h4 style="font-size: 2rem; color: #fff;">10+</h4>
-                            <span style="font-size: 0.9rem; color: var(--text-muted);">Projects<br>Completed</span>
-                        </div>
-                    </div>
+                    <h2 class="about__subtitle">Hi this is Aman</h2>
+                    <p class="about__text">I'm a software developer and a machine learning enthusiast with a strong
+                        background in data science, machine learning, and full-stack development. I'm passionate about
+                        solving complex challenges and creating impactful solutions through technology. In my free time,
+                        I enjoy reading, staying updated on the latest technological advancements, and practicing
+                        martial arts and meditation to maintain a balanced mindset.</p>
                 </div>
 
-                <!-- Experience Timeline (Simplified) -->
-                <div class="experience">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--first-color);">Experience</h3>
-                    <div style="border-left: 2px solid var(--glass-border); padding-left: 2rem; position: relative;">
-                        <div style="margin-bottom: 2rem; position: relative;">
-                            <div
-                                style="position: absolute; left: -2.6rem; top: 0.5rem; width: 12px; height: 12px; background: var(--first-color); border-radius: 50%; box-shadow: 0 0 10px var(--first-color);">
-                            </div>
-                            <h4 style="margin-bottom: 0.5rem;">Freelance Developer</h4>
-                            <span style="color: var(--text-muted); font-size: 0.9rem;">Upwork • Present</span>
-                        </div>
-                        <div style="margin-bottom: 2rem; position: relative;">
-                            <div
-                                style="position: absolute; left: -2.6rem; top: 0.5rem; width: 12px; height: 12px; background: var(--first-color); border-radius: 50%; box-shadow: 0 0 10px var(--first-color);">
-                            </div>
-                            <h4 style="margin-bottom: 0.5rem;">AI Trainer</h4>
-                            <span style="color: var(--text-muted); font-size: 0.9rem;">Outlier AI • 2024</span>
-                        </div>
-                        <div style="position: relative;">
-                            <div
-                                style="position: absolute; left: -2.6rem; top: 0.5rem; width: 12px; height: 12px; background: var(--first-color); border-radius: 50%; box-shadow: 0 0 10px var(--first-color);">
-                            </div>
-                            <h4 style="margin-bottom: 0.5rem;">Technical Contributor</h4>
-                            <span style="color: var(--text-muted); font-size: 0.9rem;">Alignerr • 2023</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -242,14 +200,7 @@
                         Zomato-style food ordering app handling 10,000+ users with sub-second response time and AWS
                         scalability.
                     </p>
-                    <div class="flex" style="flex-wrap: wrap; gap: 0.5rem;">
-                        <span
-                            style="background: rgba(79, 172, 254, 0.1); color: var(--first-color); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">Django</span>
-                        <span
-                            style="background: rgba(79, 172, 254, 0.1); color: var(--first-color); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">AWS</span>
-                        <span
-                            style="background: rgba(79, 172, 254, 0.1); color: var(--first-color); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">JS</span>
-                    </div>
+                    <p class="project__tech">Django, AWS, JavaScript, HTML/CSS</p>
                 </div>
 
                 <div class="project__card" data-project="deepfake">
@@ -364,25 +315,16 @@
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Contact</h2>
 
-            <div class="container" style="max-width: 800px;">
-                <div class="card contact__container">
-                    <form action="https://formspree.io/f/xjkvbzda" method="POST" class="grid" style="gap: 1.5rem;">
-                        <div class="grid"
-                            style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                            <input type="text" name="name" placeholder="Name"
-                                style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: #fff; outline: none;">
-                            <input type="email" name="email" placeholder="Email"
-                                style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: #fff; outline: none;">
-                        </div>
-                        <textarea name="message" placeholder="Your message" rows="6"
-                            style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: #fff; outline: none; resize: none;"></textarea>
-                        <button type="submit" class="btn btn-primary" style="justify-self: start;">
-                            Send Message <i class='bx bx-send'></i>
-                        </button>
-                    </form>
-                </div>
+            <div class="contact__container bd-grid">
+                <form action="https://formspree.io/f/xjkvbzda" method="POST" class="contact__form">
+                    <input type="text" name="name" placeholder="Name" class="contact__input">
+                    <input type="email" name="email" placeholder="Email" class="contact__input">
+                    <textarea name="message" placeholder="Your message" cols="0" rows="10"
+                        class="contact__input"></textarea>
+                    <input type="submit" value="Send" class="contact__button button">
+                </form>
             </div>
         </section>
     </main>
