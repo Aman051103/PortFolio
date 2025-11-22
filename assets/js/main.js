@@ -51,42 +51,59 @@ const scrollActive = () =>{
 window.addEventListener('scroll', scrollActive)
 
 /*===== TYPING EFFECT =====*/
-const typingText = document.querySelector('.typing-text');
-const typingSubtitle = document.querySelector('.typing-subtitle');
+function initTypingEffect() {
+    const typingText = document.querySelector('.typing-text');
+    const typingSubtitle = document.querySelector('.typing-subtitle');
 
-if (typingText && typingSubtitle) {
-    const name = 'Aman Pandey';
-    const subtitle = 'ML Engineer';
-    let nameIndex = 0;
-    let subtitleIndex = 0;
-    let isDeleting = false;
-    let isNameComplete = false;
+    if (typingText && typingSubtitle) {
+        const name = 'Aman Pandey';
+        const subtitle = 'ML Engineer';
+        
+        // Store original content as fallback
+        const originalName = typingText.textContent || name;
+        const originalSubtitle = typingSubtitle.textContent || subtitle;
+        
+        let nameIndex = 0;
+        let subtitleIndex = 0;
+        let isNameComplete = false;
 
-    function typeName() {
-        if (!isNameComplete) {
-            if (nameIndex < name.length && !isDeleting) {
-                typingText.textContent = name.substring(0, nameIndex + 1);
-                nameIndex++;
-                setTimeout(typeName, 150);
-            } else if (nameIndex === name.length) {
-                isNameComplete = true;
-                setTimeout(() => {
-                    typeSubtitle();
-                }, 1000);
+        // Clear content to start typing animation
+        typingText.textContent = '';
+        typingSubtitle.textContent = '';
+
+        function typeName() {
+            if (!isNameComplete) {
+                if (nameIndex < name.length) {
+                    typingText.textContent = name.substring(0, nameIndex + 1);
+                    nameIndex++;
+                    setTimeout(typeName, 150);
+                } else if (nameIndex === name.length) {
+                    isNameComplete = true;
+                    setTimeout(() => {
+                        typeSubtitle();
+                    }, 1000);
+                }
             }
         }
-    }
 
-    function typeSubtitle() {
-        if (subtitleIndex < subtitle.length) {
-            typingSubtitle.textContent = subtitle.substring(0, subtitleIndex + 1);
-            subtitleIndex++;
-            setTimeout(typeSubtitle, 100);
+        function typeSubtitle() {
+            if (subtitleIndex < subtitle.length) {
+                typingSubtitle.textContent = subtitle.substring(0, subtitleIndex + 1);
+                subtitleIndex++;
+                setTimeout(typeSubtitle, 100);
+            }
         }
-    }
 
-    // Start typing after a short delay
-    setTimeout(typeName, 500);
+        // Start typing after a delay
+        setTimeout(typeName, 500);
+    }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTypingEffect);
+} else {
+    initTypingEffect();
 }
 
 /*===== ANIMATED SKILL BARS =====*/

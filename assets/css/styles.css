@@ -504,15 +504,25 @@ ul {
 
 /*===== TYPING EFFECT =====*/
 .typing-text {
-  border-right: 2px solid var(--first-color);
+  display: inline-block;
+  position: relative;
+}
+.typing-text::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--first-color);
   animation: blink 1s infinite;
 }
 .typing-subtitle {
   display: inline-block;
 }
 @keyframes blink {
-  0%, 50% { border-color: var(--first-color); }
-  51%, 100% { border-color: transparent; }
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 /*===== PULSE BUTTON =====*/
